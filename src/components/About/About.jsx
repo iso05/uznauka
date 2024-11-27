@@ -2,17 +2,17 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="pb-10 pt-10 bg-gray-50 px-20" id="about">
-      <div className="text-center pt-10 pb-5 text-[50px] font-semibold">
+    <div className="pb-10 pt-10 bg-gray-50 px-7 lg:px-20" id="about">
+      <div className="text-center pt-10 pb-5 text-[35px] md:text-[50px] font-semibold">
         Компания UzNauka
       </div>
-      <div>
+      <div className="pb-5">
         <b className="text-[#696969]">Компания «UzNauka»</b> - является
         премиальным представителем компаний, занимающих высокое уровен в сфере
         научных услуг, и является академической площадкой, широко продвигающей
         науку и инновации в Узбекистане.
       </div>
-      <div>
+      <div className="pb-5">
         <b className="text-[#696969]">Компания UzNauka</b>
         <span>
           {" "}
@@ -40,7 +40,7 @@ const About = () => {
         процессу служит повышению научной грамотности широких слоев населения.
       </div>
       <div>
-        <h4 className="text-center my-5 text-[50px] font-semibold">
+        <h4 className="text-center my-5 text-[35px] md:text-[50px] font-semibold">
           Основные задачи компании:
         </h4>
         <ul>

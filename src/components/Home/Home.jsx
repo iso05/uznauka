@@ -3,15 +3,15 @@ import "../../index.css";
 
 export default function Home() {
   return (
-    <div className=" w-full py-10 px-20 flex flex-col xl:flex-row xl:px-[100px] justify-center items-center">
-      <div className="md:text-center xl:text-left">
-        <p className="text-[#c2c2c2] font-[600] uppercase tracking-widest leading-7">
+    <div className="py-28 w-full md:py-10 sm:px-5 flex flex-col xl:flex-row xl:px-28 justify-center items-center">
+      <div className="text-center xl:text-left">
+        <p className="text-[#c2c2c2] font-[600] uppercase tracking-widest lg:leading-7">
           Ваша статья готова?
         </p>
-        <h3 className="text-[#005bc1] text-[40px] font-semibold">
+        <h3 className="text-[#005bc1] text-[25px] md:text-[40px] font-semibold">
           Лучший выбор для вас
         </h3>
-        <h1 className="text-[#005bc1] leading-[70px] mb-4 text-[90px] font-semibold tracking-widest">
+        <h1 className="text-[#005bc1] lg:leading-[70px] mb-4 text-[45px] md:text-[90px] font-semibold tracking-widest">
           Uznauka.uz
         </h1>
         <h6 className="text-[#2a2a2a] text-lg leading-8">

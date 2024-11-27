@@ -9,10 +9,10 @@ import img5 from "../../assets/cover/img_5.jpg";
 const Magazines = () => {
   return (
     <div className="h-auto bg-[#f0f8ff] pb-14">
-      <div className="text-center pt-[60px] text-[#086ad8] text-[50px] font-semibold">
+      <div className="text-center pt-[60px] text-[#086ad8] text-[35px] md:text-[50px] font-semibold">
         Hаши журналы
       </div>
-      <div className="pt-14 gap-10 flex xl:flex-row flex-col flex-wrap items-center justify-center">
+      <div className="pt-14 gap-10 flex md:flex-row flex-col flex-wrap items-center justify-center">
         <Cover
           img={img1}
           link={"https://journals.uznauka.uz/index.php/ojs/index"}

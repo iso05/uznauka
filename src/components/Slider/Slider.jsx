@@ -16,9 +16,15 @@ const Slider = () => {
       <Swiper
         breakpoints={{
           // when window width is >= 640px
+          350: {
+            width: 330,
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
           640: {
-            width: 700,
-            slidesPerView: 3,
+            width: 600,
+            slidesPerView: 2,
+            spaceBetween: 30
           },
           // when window width is >= 768px
           769: {
@@ -42,42 +48,42 @@ const Slider = () => {
         modules={[Pagination, Autoplay]}
         className="mySwiper mt-[100px] w-full"
       >
-        <SwiperSlide className="group mx-10">
+        <SwiperSlide className="group mx-2 md:mx-10">
           <img
             src={img1}
             alt=""
             className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg object-cover hover:scale-150"
           />
         </SwiperSlide>
-        <SwiperSlide className="group mx-10">
+        <SwiperSlide className="group mx-2 md:mx-10">
           <img
             src={img2}
             alt=""
             className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg object-cover hover:scale-105"
           />
         </SwiperSlide>
-        <SwiperSlide className="group mx-10">
+        <SwiperSlide className="group mx-2 md:mx-10">
           <img
             src={img3}
             alt=""
             className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg object-cover hover:scale-105"
           />
         </SwiperSlide>
-        <SwiperSlide className="group mx-10">
+        <SwiperSlide className="group mx-2 md:mx-10">
           <img
             src={img4}
             alt=""
             className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg object-cover hover:scale-105"
           />
         </SwiperSlide>
-        <SwiperSlide className="group mx-10">
+        <SwiperSlide className="group mx-2 md:mx-10">
           <img
             src={img5}
             alt=""
             className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg object-cover hover:scale-105"
           />
         </SwiperSlide>
-        <SwiperSlide className="group mx-10">
+        <SwiperSlide className="group mx-2 md:mx-10">
           <img
             src={img6}
             alt=""

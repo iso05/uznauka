@@ -4,11 +4,11 @@ import Counter from "../Counter/Counter";
 
 const Index = () => {
   return (
-    <div className="pt-[100px] ">
-      <div className="text-center text-[#086ad8] text-[50px] font-semibold">
+    <div className="pt-[100px]">
+      <div className="text-center text-[#086ad8] text-[35px] md:text-[50px] font-semibold">
         Журналы индекса
       </div>
-      {/* <Slider /> */}
+      <Slider />
       <Counter />
     </div>
   );
