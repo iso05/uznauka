@@ -28,7 +28,7 @@ export default function Home() {
       </div>
       <div className="animation-home" data-aos="fade-left" data-aos-duration="1000">
         <img
-          src={home}
+          src={home} 
           className="w-[300px] md:w-[700px] xl:w-[550px]"
           alt="Home Image"
         />
