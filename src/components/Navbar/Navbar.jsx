@@ -94,12 +94,12 @@ export default function Navbar() {
         >
           <li className="text-white text-2xl">
             <a href="/" className="">
-              Главная
+              {t("navbar.Asosiy")}
             </a>
           </li>
           <li className="text-white text-2xl">
             <a href="#about" className="block">
-              О нас
+            {t("navbar.Haqida")}
             </a>
           </li>
           <li>
@@ -141,7 +141,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      Социальные науки и образование
+                      {t("navbar.j3")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -149,7 +149,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      Научные тенденции в медицине
+                      {t("navbar.j4")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -157,7 +157,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      Инновации в точных науках
+                      {t("navbar.j5")}
                     </a>
                   </MenuItem>
                 </div>
@@ -187,8 +187,7 @@ export default function Navbar() {
                       href="https://conf.uznauka.uz/index.php/zttf/issue/view/6"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-mdafter:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      НАУЧНО-ИННОВАЦИОННЫЕ ИССЛЕДОВАНИЯ В СОВРЕМЕННОЙ МЕДИЦИНЕ И
-                      ЕСТЕСТВЕННЫХ НАУКАХ
+                      {t("navbar.conf1")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 mx-2 relative">
@@ -196,8 +195,25 @@ export default function Navbar() {
                       href="#"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md   after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      ОБСУЖДЕНИЕ РЕЗУЛЬТАТОВ СОВРЕМЕННОЙ НАУКИ И ИННОВАЦИОННЫХ
-                      ИССЛЕДОВАНИЙ
+                      {t("navbar.conf2")}
+                    </a>
+                  </MenuItem>
+
+                  <MenuItem className="my-2 mx-2 relative">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md   after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
+                    >
+                      {t("navbar.conf3")}
+                    </a>
+                  </MenuItem>
+
+                  <MenuItem className="my-2 px-4 mx-2 relative">
+                    <a
+                      href="#"
+                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
+                    >
+                      {t("navbar.conf4")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -205,7 +221,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      СОВРЕМЕННАЯ ПСИХОЛОГИЯ И ПЕДАГОГИКА: ПРОБЛЕМЫ И РЕШЕНИЯ
+                      {t("navbar.conf5")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -213,8 +229,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      АКТУАЛЬНЫЕ ПРОБЛЕМЫ ИСТОРИИ, ПОЛИТИКИ, ОБЩЕСТВА И
-                      ФИЛОСОФИИ
+                    {t("navbar.conf6")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -222,17 +237,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      ФИЗИКА, ТЕХНИКА И МАТЕМАТИКА: МЕЖДИСЦИПЛИНАРНЫЕ НАУЧНЫЕ
-                      ДИСКУССИИ
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="#"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      НАУЧНО-ПРАКТИЧЕСКИЕ ПРОБЛЕМЫ СОВРЕМЕННОГО УПРАВЛЕНИЯ И
-                      ЭКОНОМИКИ
+                      {t("navbar.conf7")}
                     </a>
                   </MenuItem>
                 </div>
@@ -240,7 +245,7 @@ export default function Navbar() {
             </Menu>
           </li>
           <li className="text-2xl text-white">
-            <a href="#contact">Контакт</a>
+            <a href="#contact">{t("navbar.Aloqa")}</a>
           </li>
         </ul>
       </div>
@@ -344,8 +349,7 @@ export default function Navbar() {
                       href="https://conf.uznauka.uz/index.php/zttf/issue/view/6"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      НАУЧНО-ИННОВАЦИОННЫЕ ИССЛЕДОВАНИЯ В СОВРЕМЕННОЙ МЕДИЦИНЕ И
-                      ЕСТЕСТВЕННЫХ НАУКАХ
+                      {t("navbar.conf1")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 mx-2 relative">
@@ -353,8 +357,25 @@ export default function Navbar() {
                       href="#"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      ОБСУЖДЕНИЕ РЕЗУЛЬТАТОВ СОВРЕМЕННОЙ НАУКИ И ИННОВАЦИОННЫХ
-                      ИССЛЕДОВАНИЙ
+                      {t("navbar.conf2")}
+                    </a>
+                  </MenuItem>
+
+                  <MenuItem className="my-2 mx-2 relative">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
+                    >
+                      {t("navbar.conf3")}
+                    </a>
+                  </MenuItem>
+
+                  <MenuItem className="my-2 px-4 mx-2 relative">
+                    <a
+                      href="#"
+                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
+                    >
+                      {t("navbar.conf4")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -362,7 +383,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      СОВРЕМЕННАЯ ПСИХОЛОГИЯ И ПЕДАГОГИКА: ПРОБЛЕМЫ И РЕШЕНИЯ
+                    {t("navbar.conf5")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -370,8 +391,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      АКТУАЛЬНЫЕ ПРОБЛЕМЫ ИСТОРИИ, ПОЛИТИКИ, ОБЩЕСТВА И
-                      ФИЛОСОФИИ
+                      {t("navbar.conf6")}
                     </a>
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
@@ -379,17 +399,7 @@ export default function Navbar() {
                       href="#"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
-                      ФИЗИКА, ТЕХНИКА И МАТЕМАТИКА: МЕЖДИСЦИПЛИНАРНЫЕ НАУЧНЫЕ
-                      ДИСКУССИИ
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="#"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      НАУЧНО-ПРАКТИЧЕСКИЕ ПРОБЛЕМЫ СОВРЕМЕННОГО УПРАВЛЕНИЯ И
-                      ЭКОНОМИКИ
+                      {t("navbar.conf7")}
                     </a>
                   </MenuItem>
                 </div>

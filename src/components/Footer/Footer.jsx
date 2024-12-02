@@ -25,7 +25,7 @@ const { t } = useTranslation();
           <div className="mb-3 text-xl">{t("foot.adres")}</div>
           <div className="flex gap-10 my-2">
             <img src={map} alt="" />
-            <span>г.Ташкент, ул.А.Навои, 30</span>
+            <span>{t("foot.adr")}</span>
           </div>
           <div className="flex gap-10 my-2">
             <img src={phone} alt="" />
@@ -48,7 +48,7 @@ const { t } = useTranslation();
         </div>
       </div>
       <div className="text-center text-lg pt-5 pb-2">
-        &copy; 2024 uznauka.uz Все права защищены.
+        &copy; {t("foot.prava")}
       </div>
     </div>
   );
