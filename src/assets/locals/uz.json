@@ -1,0 +1,59 @@
+{
+    "navbar": {
+        "Asosiy" : "Asosiy",
+        "Haqida" : "Haqida",
+        "Aloqa": "Aloqa",
+        "Jurnal": "Jurnal",
+        "Konf": "Konferensiya",
+        "j1":"Fan va Jamiyat",
+        "j2":"Huquq, Siyosat va Jamiyat",
+        "j3":"Ijtimoiy Soha va Innovatsiyalar",
+        "j4":"Tibbiyotda Ilmiy Tendensiyalar",
+        "j5":"Aniq Fanlarda Innovatsiyalar"
+    }, 
+        "haqida": {
+            "p1": "ilmiy xizmatlar sohasida yuqori darajada faoliyat yurituvchi kompaniyalarning premium vakili bo‘lib, O‘zbekistonda ilm-fan va innovatsiyalarni keng targ‘ib qiluvchi akademik platforma hisoblanadi.",
+            "2p": " ilmiy tadqiqotlar natijalarini chop etish uchun O‘zbekiston Respublikasi Oliy ta'lim, fan va innovatsiyalar vazirligi huzuridagi Oliy attestatsiya komissiyasi (OAK) tomonidan tavsiya etilgan bir qator sifatli ilmiy nashrlarni tayyorlagan.",
+            "p3": " - mamlakatimizda va xorijda ilm-fan, ta'lim va innovatsiyalar bilan bog‘liq akademik xodimlar uchun ilmiy yangiliklarni yetkazib berishda vositachi bo‘lib xizmat qiladi.",
+            "p4": " Bundan tashqari, kompaniyamiz O‘zbekiston Respublikasining barcha sohalarida va dunyoda ilm-fan holati, ilmiy yangiliklar, qonunchilik yangiliklari haqida davlat idoralari va jahon hamjamiyatini xabardor qiladi, O‘zbekiston Respublikasining turli sohalarida olimlar va amaliyotchilarning ilmiy tadqiqotlarini yoritadi, mamlakatda amalga oshirilayotgan ijtimoiy munosabatlarning ilmiy asosini yaratadi va uni takomillashtiradi, ushbu jarayonni yaqin hamkorlikda qo‘llab-quvvatlash keng jamoatchilikning ilmiy savodxonligini oshirishga xizmat qiladi.",
+             "li1": "-O‘zbekiston Respublikasining barcha sohalarida ilmiy tahlil qilish va ularni takomillashtirish bo‘yicha ishlab chiqilgan takliflarni tushuntirish;",
+            "li2": "-O‘zbekiston Respublikasining ilmiy innovatsiyalarini xorijiy mamlakatlarning ilmiy jamoatchiligi bilan ilmiy va qiyosiy tahlil qilishni yoritish;",
+            "li3": "-O‘zbekiston Respublikasining ilm-fan sohalarida olimlar va amaliyotchilarning ilmiy tadqiqotlarini yoritish;",
+            "li4": "-Mamlakatda amalga oshirilayotgan siyosiy, ijtimoiy-iqtisodiy, huquqiy va ilmiy-innovatsion islohotlarning mohiyatini keng tushuntirish;",
+            "li5": "-Xorijiy mamlakatlarning jahonda tan olingan olimlari va amaliyotchilarini hamkorlikka jalb qilish;",
+            "li6": "-Yuqori darajadagi ilmiy nazariy va analitik materiallarni tayyorlash va nashr qilish.",
+            "p5": "Turli yo‘nalishlar bo‘yicha ilmiy-analitik materiallarni nashr etish.",
+            "p6": "Jurnal oyiga bir marta nashr etiladi, yil davomida jami 12 son chiqadi va akademik muhitda jahon axborot tizimi orqali tarqatiladi. Shuningdek, navbatdan tashqari maxsus sonlarni chop etishga ruxsat beriladi.",
+            "sar1": "UzNauka Kompaniyasi",
+            "os1": "Kompaniyaning asosiy vazifalari:",
+            "sar2":"Kompaniyaning asosiy maqsadi",
+            "sar3":"Ilmiy nashrtlarning ixtisoslashuvi:",
+            "sar4":"Ilmiy nashrtlarning davriyligi:"
+
+
+        },
+        "jurnal":{
+        "s1":"Bizning Jurnallar"
+    },
+    "inedks":{
+        "ind": "Jurnallar indeksi"
+    },
+    "Countr": {
+        "c1": "Maqolalar",
+        "c2": "Jurnallar",
+        "c3": "Konferensiyalar",
+        "c4": "Postlar"
+    },
+    "foot": {
+        "fot1": "«UzNauka» kompaniyasi – ilmiy xizmatlar sohasida yuqori darajada faoliyat yurituvchi kompaniyalarning premium vakili bo‘lib, O‘zbekiston ilm-fan va innovatsiyalarni keng targ‘ib qiluvchi akademik platforma hisoblanadi.",
+        "adres":"Manzil"
+    },
+    "home":{
+        "stat":"Maqolangizni tayyormi?",
+        "b":"Siz uchun eng yaxshi tanlov",
+        "ha6":"Turli xil konferensiya maqolalar chop etish va ularga xizmat ko'rsatish bo'yicha xizmatlarning to'liq to'plami.",
+        "but1":"Batafsil"
+     }
+
+    
+}

@@ -7,14 +7,19 @@ import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
+
+  
+
   return (
     <div className="">
       <Navbar />
-      <Home />
-      <About />
-      <Magazines />
-      <Index />
-      <Footer />
+      <div className="lg:container mx-auto">
+        <Home />
+        <About />
+        <Magazines />
+        <Index />
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -11,20 +11,21 @@ import img6 from "../../assets/swiper/img_5.png";
 import img7 from "../../assets/swiper/img_6.png";
 
 const Slider = () => {
+  
   return (
     <div className="h-[200px]">
       <Swiper
         breakpoints={{
           // when window width is >= 640px
-          350: {
-            width: 330,
+          325: {
+            width: 320,
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 10,
           },
           640: {
             width: 600,
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 30,
           },
           // when window width is >= 768px
           769: {

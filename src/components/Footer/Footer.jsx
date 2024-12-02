@@ -3,8 +3,12 @@ import footerImg from "../../assets/logo_uz.png";
 import map from "../../assets/svgs/map.svg";
 import mail from "../../assets/svgs/mail.svg";
 import phone from "../../assets/svgs/phone.svg";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+const { t } = useTranslation();
+
+
   return (
     <div
       className="bg-[#212529] flex flex-col text-white px-5 md:px-20 pt-10"
@@ -14,14 +18,11 @@ const Footer = () => {
         <div className="flex-1 flex flex-col justify-between items-center">
           <img src={footerImg} className="w-[200px] py-5" alt="" />
           <div className="text-white">
-            Компания «УзНаука» - является премиальным представителем компаний,
-            занимающих высокое уровен в сфере научных услуг, и является
-            академической площадкой, широко продвигающей науку и инновации в
-            Узбекистане.
+            {t("foot.fot1")}
           </div>
         </div>
         <div className="flex-1 flex-col flex justify-center px-2 md:px-10 py-5">
-          <div className="mb-3 text-xl">Наш адрес</div>
+          <div className="mb-3 text-xl">{t("foot.adres")}</div>
           <div className="flex gap-10 my-2">
             <img src={map} alt="" />
             <span>г.Ташкент, ул.А.Навои, 30</span>

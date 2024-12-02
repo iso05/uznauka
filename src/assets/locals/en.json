@@ -1,0 +1,59 @@
+{
+    "navbar": {
+        "Asosiy": "Home",
+        "Haqida": "About",
+        "Aloqa": "Contact",
+        "Jurnal": "Journal",
+        "Konf": "Conference",
+        "j1":"Science and Society",
+        "j2":"Law, Policy and Society",
+        "j3":"Social Science and Society",
+        "j4":"Scientific Trends in Medicine",
+        "j5":"Innovations in Exact Science"
+    },
+        "haqida": {
+            "p1": "is a premium representative of companies operating at a high level in the field of scientific services and serves as an academic platform widely promoting science and innovation in Uzbekistan.",
+            "2p":" has produced a number of high-quality scientific publications recommended by the Higher Attestation Commission (HAC) under the Ministry of Higher Education, Science, and Innovation of the Republic of Uzbekistan for publishing the results of scientific research.",
+             "p3": " - serves as a mediator in delivering scientific news to academic personnel connected with science, education, and innovation in our country and abroad.",
+             "p4": " In addition, our company informs government institutions and the global community about the state of science in all fields of the Republic of Uzbekistan and the world, scientific news, legislative updates, highlights the scientific research of scholars and practitioners in various fields of Uzbekistan, creates and improves the scientific basis for social relations implemented in the country, and close cooperation in this process contributes to improving the scientific literacy of the general population.",
+             "li1": "-Scientific analysis in all fields of the Republic of Uzbekistan and clarification of the developed proposals for their improvement;",
+            "li2": "-Highlighting the scientific and comparative analysis of Uzbekistan's scientific innovations with the scientific communities of foreign countries;",
+            "li3": "-Highlighting the scientific research of scientists and practitioners in the fields of science in the Republic of Uzbekistan;",
+            "li4": "-Broadly explaining the nature of the political, socio-economic, legal, and scientific-innovative reforms being carried out in the country;",
+            "li5": "-Engaging globally recognized scientists and practitioners from foreign countries in collaboration;",
+            "li6": "-Preparing and publishing high-level scientific theoretical and analytical materials.",
+            "p5": "Publication of scientific and analytical materials in various fields.",
+            "p6": "The journal is published once a month, totaling 12 issues per year, and is distributed in the academic community through the global Internet information system. It is also permitted to print special issues out of schedule.",
+            "sar1": "UzNauka Company",
+            "os1": "The main tasks of the company:",
+            "sar2":"The main goal of our company",
+            "sar3":"Specialization of scientific publications:",
+            "sar4":"Frequency of scientific publications:"
+
+
+        },
+
+        "jurnal":{
+        "s1":"Our Journals"
+    },
+    "inedks":{
+        "ind": "Journal index"
+    },
+    "Countr": {
+        "c1": "Articles",
+        "c2": "Journals",
+        "c3": "Conferences",
+        "c4": "Posts"
+    },
+    "foot": {
+        "fot1": "The company 'UzNauka' is a premium representative of companies operating at a high level in the field of scientific services and is an academic platform that widely promotes science and innovation in Uzbekistan.",
+        "adres":"Our Adress"
+    },
+    "home":{
+        "stat":"Is your article ready?",
+        "b":"The best choice",
+        "ha6":"A complete set of services for the publication and maintenance of various conference papers.",
+        "but1":"More"
+     }
+    
+}

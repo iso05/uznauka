@@ -5,12 +5,15 @@ import img2 from "../../assets/cover/img_2.jpg";
 import img3 from "../../assets/cover/img_3.jpg";
 import img4 from "../../assets/cover/img_4.jpg";
 import img5 from "../../assets/cover/img_5.jpg";
+import { useTranslation } from "react-i18next";
 
 const Magazines = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="h-auto bg-[#f0f8ff] pb-14">
+    <div className="h-auto bg-[#f0f8ff] pb-14" data-aos="fade-up">
       <div className="text-center pt-[60px] text-[#086ad8] text-[35px] md:text-[50px] font-semibold">
-        Hаши журналы
+        {t("jurnal.s1")}
       </div>
       <div className="pt-14 gap-10 flex md:flex-row flex-col flex-wrap items-center justify-center">
         <Cover
