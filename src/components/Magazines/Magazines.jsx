@@ -18,7 +18,7 @@ const Magazines = () => {
       <div className="pt-14 gap-10 flex md:flex-row flex-col flex-wrap items-center justify-center">
         <Cover
           img={img1}
-          link={"https://journals.uznauka.uz/index.php/ojs/index"}
+          link={"https://journal.uznauka.uz/index.php/sas"}
         />
         <Cover
           img={img2}
