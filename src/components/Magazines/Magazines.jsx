@@ -22,19 +22,19 @@ const Magazines = () => {
         />
         <Cover
           img={img2}
-          link={"https://journals.uznauka.uz/index.php/stm/index"}
+          link={"https://journal.uznauka.uz/index.php/medicine"}
         />
         <Cover
           img={img3}
-          link={"https://journals.uznauka.uz/index.php/ies/index"}
+          link={"https://journal.uznauka.uz/index.php/exscience"}
         />
         <Cover
           img={img4}
-          link={"https://journals.uznauka.uz/index.php/lps/index"}
+          link={"https://journal.uznauka.uz/index.php/lawpolicy"}
         />
         <Cover
           img={img5}
-          link={"https://journals.uznauka.uz/index.php/sse/index"}
+          link={"https://journal.uznauka.uz/index.php/socscience"}
         />
       </div>
     </div>

@@ -122,7 +122,7 @@ export default function Navbar() {
                 <div className="py-1">
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="https://journals.uznauka.uz/index.php/ojs/index"
+                      href="https://journal.uznauka.uz/index.php/sas"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j1")}
@@ -130,7 +130,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/medicine"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j2")}
@@ -138,7 +138,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/exscience"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j3")}
@@ -146,7 +146,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/lawpolicy"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j4")}
@@ -154,7 +154,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/socscience"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j5")}
@@ -184,7 +184,7 @@ export default function Navbar() {
                 <div className="py-1">
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="https://conf.uznauka.uz/index.php/zttf/issue/view/6"
+                      href="https://conference.uznauka.uz/index.php/ztfi/index"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-mdafter:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf1")}
@@ -192,7 +192,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zif/index"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md   after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf2")}
@@ -201,7 +201,7 @@ export default function Navbar() {
 
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zham/index"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md   after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf3")}
@@ -210,7 +210,7 @@ export default function Navbar() {
 
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zpp/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf4")}
@@ -218,7 +218,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/tsj/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf5")}
@@ -226,7 +226,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/ftm/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                     {t("navbar.conf6")}
@@ -234,10 +234,18 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zmv/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf7")}
+                    </a>
+                  </MenuItem>
+                  <MenuItem className="my-2 px-4 mx-2 relative">
+                    <a
+                      href="https://conference.uznauka.uz/index.php/ffm/index"
+                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
+                    >
+                      {t("navbar.conf8")}
                     </a>
                   </MenuItem>
                 </div>
@@ -282,7 +290,7 @@ export default function Navbar() {
                 <div className="py-1">
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="https://journals.uznauka.uz/index.php/ojs/index"
+                      href="https://journal.uznauka.uz/index.php/sas"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j1")}
@@ -290,7 +298,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/medicine"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j2")}
@@ -298,7 +306,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/exscience"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j3")}
@@ -306,7 +314,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/lawpolicy"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j4")}
@@ -314,7 +322,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://journal.uznauka.uz/index.php/socscience"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.j5")}
@@ -346,7 +354,7 @@ export default function Navbar() {
                 <div className="py-1">
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="https://conf.uznauka.uz/index.php/zttf/issue/view/6"
+                      href="https://conference.uznauka.uz/index.php/ztfi/index"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf1")}
@@ -354,7 +362,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zif/index"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf2")}
@@ -363,7 +371,7 @@ export default function Navbar() {
 
                   <MenuItem className="my-2 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zham/index"
                       className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf3")}
@@ -372,7 +380,7 @@ export default function Navbar() {
 
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zpp/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf4")}
@@ -380,7 +388,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/tsj/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                     {t("navbar.conf5")}
@@ -388,7 +396,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/ftm/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf6")}
@@ -396,10 +404,18 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem className="my-2 px-4 mx-2 relative">
                     <a
-                      href="#"
+                      href="https://conference.uznauka.uz/index.php/zmv/index"
                       className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
                     >
                       {t("navbar.conf7")}
+                    </a>
+                  </MenuItem>
+                  <MenuItem className="my-2 px-4 mx-2 relative">
+                    <a
+                      href="https://conference.uznauka.uz/index.php/ffm/index"
+                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
+                    >
+                      {t("navbar.conf8")}
                     </a>
                   </MenuItem>
                 </div>
