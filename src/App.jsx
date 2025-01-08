@@ -12,12 +12,13 @@ const App = () => {
   useEffect(() => {
     try {
       const script = document.createElement('script');
-      script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+      script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-504799818992173';
       script.async = true;
       script.crossOrigin = 'anonymous';
-      // Replace YOUR_PUBLISHER_ID with your actual AdSense publisher ID
-      script.dataset.adClient = 'ca-pub-5047998189921732';
       document.head.appendChild(script);
+
+      // Initialize adsbygoogle
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (error) {
       console.error('AdSense error:', error);
     }
