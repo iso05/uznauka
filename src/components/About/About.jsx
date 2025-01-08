@@ -1,7 +1,15 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useEffect } from 'react';
 
 const About = () => {
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error('AdSense error:', e);
+    }
+  }, []);
   const { t } = useTranslation();
 
   return (
@@ -46,7 +54,18 @@ const About = () => {
       <div className="mt-3">
         <b className="text-[#696969]">{t("haqida.sar4")} </b> {t("haqida.p6")}
       </div>
+
+     <div className="ad-container">
+      <ins className="adsbygoogle"
+      style={{ display: 'block' }}
+      data-ad-format="fluid"
+      data-ad-layout-key="-fb+5w4e+db+86"
+      data-ad-client="ca-pub-5047998189921732"
+      data-ad-slot="5554813692"></ins>
     </div>
+
+    </div>
+    
   );
 };
 

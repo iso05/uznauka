@@ -41,6 +41,9 @@ const Counter = () => {
         <span className="text-[30px]">{t("Countr.c4")}</span>
       </div>
     </div>
+    
+      
+
   );
 };
 
