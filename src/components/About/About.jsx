@@ -55,14 +55,13 @@ const About = () => {
         <b className="text-[#696969]">{t("haqida.sar4")} </b> {t("haqida.p6")}
       </div>
 
-    <div className="mt-3 ad-container">
+    
       <ins className="adsbygoogle"
       style={{ display: 'block' }}
       data-ad-format="fluid"
       data-ad-layout-key="-fb+5w4e+db+86"
       data-ad-client="ca-pub-5047998189921732"
       data-ad-slot="5554813692"></ins>
-    </div>
 
     </div>
     
