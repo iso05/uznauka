@@ -1,478 +1,302 @@
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
 import logo from "../../assets/logo_uz.png";
-import { FaChevronDown } from "react-icons/fa";
-import { IoGlobeOutline } from "react-icons/io5";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FaChevronDown, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import i18n from "../../i18";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useTranslation();
-  const translateUz = () => {
-    i18n.changeLanguage("uz");
-  };
-  const translateEn = () => {
-    i18n.changeLanguage("en");
-  };
-  const translateRu = () => {
-    i18n.changeLanguage("ru");
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (open) {
-        setOpen(false);
-      }
+      setIsScrolled(window.scrollY > 20);
+      if (isOpen) setIsOpen(false);
     };
-
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [open]);
+  const journals = [
+    { name: t("navbar.j1"), url: "https://journal.uznauka.uz/index.php/sas" },
+    { name: t("navbar.j2"), url: "https://journal.uznauka.uz/index.php/lawpolicy" },
+    { name: t("navbar.j3"), url: "https://journal.uznauka.uz/index.php/socialscience" },
+    { name: t("navbar.j4"), url: "https://journal.uznauka.uz/index.php/medicine" },
+    { name: t("navbar.j5"), url: "https://journal.uznauka.uz/index.php/exactscience" },
+  ];
+
+  const conferences = [
+    { name: t("navbar.conf1"), url: "https://conference.uznauka.uz/index.php/ztfi/index" },
+    { name: t("navbar.conf2"), url: "https://conference.uznauka.uz/index.php/zif/index" },
+    { name: t("navbar.conf3"), url: "https://conference.uznauka.uz/index.php/zham/index" },
+    { name: t("navbar.conf4"), url: "https://conference.uznauka.uz/index.php/zpp/index" },
+    { name: t("navbar.conf5"), url: "https://conference.uznauka.uz/index.php/tsj/index" },
+    { name: t("navbar.conf6"), url: "https://conference.uznauka.uz/index.php/ftm/index" },
+    { name: t("navbar.conf7"), url: "https://conference.uznauka.uz/index.php/zmv/index" },
+    { name: t("navbar.conf8"), url: "https://conference.uznauka.uz/index.php/ffm/index" },
+  ];
+
+  const langNames = {
+    uz: "O'zbek",
+    en: "English",
+    ru: "Русский"
+  };
+
+  const currentLang = i18n.language || "ru";
 
   return (
-    <>
-      <div className="bg-[#086AD8] md:hidden fixed z-50 w-full top-0">
-        <div className="flex justify-between px-5 py-3">
-          <button onClick={() => setOpen(!open)}>
-            <GiHamburgerMenu size={25} color="white" />
-          </button>
-          <Menu as="div" className="relative inline-block text-left">
-            <div>
-              <MenuButton className="flex items-center w-full justify-center gap-x-1.5 px-3 py-2 text-sm font-semibold text-gray-900 ">
-                <IoGlobeOutline size={25} color="white" />
-                <FaChevronDown
-                  aria-hidden="true"
-                  className="-mr-1 size-2 text-white"
-                />
-              </MenuButton>
-            </div>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "glass-navbar py-2 shadow-lg" 
+          : "bg-slate-900/90 md:bg-slate-900/60 backdrop-blur-sm py-4 border-b border-white/5"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center">
+            <a href="/" className="flex items-center gap-3">
+              <img src={logo} className="h-10 md:h-12 w-auto object-contain brightness-110" alt="UzNauka Logo" />
+              <span className="hidden lg:block text-white font-serif-editorial text-xl font-bold tracking-wider">
+                Uz<span className="text-rose-600">Nauka</span>
+              </span>
+            </a>
+          </div>
 
-            <MenuItems
-              transition
-              className="absolute top-7 right-0 z-10 mt-2 w-[100px] origin-top-right rounded-md bg-white shadow-xl ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+          {/* Desktop Navigation Links */}
+          <nav className="hidden md:flex space-x-1 lg:space-x-4 items-center">
+            <a 
+              href="/" 
+              className="text-slate-200 hover:text-rose-500 px-3 py-2 text-sm font-semibold tracking-wide transition-colors duration-200"
             >
-              <div className="py-1">
-                <MenuItem>
-                  <button
-                    className="px-4 py-2 w-full text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                    onClick={translateUz}
-                  >
-                    O'zbekcha
-                  </button>
-                </MenuItem>
-                <MenuItem>
-                  <button
-                    className="px-4 w-full py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                    onClick={translateEn}
-                  >
-                    {" "}
-                    English{" "}
-                  </button>
-                </MenuItem>
-                <MenuItem>
-                  <button
-                    className="px-4 w-full py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                    onClick={translateRu}
-                  >
-                    {" "}
-                    Русский
-                  </button>
-                </MenuItem>
-              </div>
-            </MenuItems>
-          </Menu>
-        </div>
-        <ul
-          className={`h-screen ${
-            open ? "flex opacity-100" : "hidden opacity-0"
-          } transition-all duration-500 flex-col gap-10 px-10 py-10`}
-        >
-          <li className="text-white text-2xl">
-            <a href="/" className="">
               {t("navbar.Asosiy")}
             </a>
-          </li>
-          <li className="text-white text-2xl">
-            <a href="#about" className="block">
-            {t("navbar.Haqida")}
-            </a>
-          </li>
-          <li>
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <MenuButton className="text-xl flex items-center font-medium w-full text-white relative">
-                  <span className="text-2xl">{t("navbar.Jurnal")}</span>
-                  <FaChevronDown
-                    size={12}
-                    aria-hidden="true"
-                    className="text-white absolute right-[-18px] top-[13px]"
-                  />
-                </MenuButton>
-              </div>
-
-              <MenuItems
-                transition
-                className="absolute top-7 left-0 z-10 mt-2 w-[270px] origin-top-right rounded-md bg-white shadow-xl ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="py-1">
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/sas"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j1")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/medicine"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j2")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/exscience"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j3")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/lawpolicy"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j4")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/socscience"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j5")}
-                    </a>
-                  </MenuItem>
-                </div>
-              </MenuItems>
-            </Menu>
-          </li>
-          <li>
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <MenuButton className="text-xl flex items-center gap-x-2 font-medium w-full text-white relative">
-                  <span className="text-2xl">{t("navbar.Konf")}</span>
-                  <FaChevronDown
-                    size={12}
-                    aria-hidden="true"
-                    className="text-white absolute right-[-20px] top-[12px]"
-                  />
-                </MenuButton>
-              </div>
-
-              <MenuItems
-                transition
-                className="h-[50vh] overflow-scroll absolute top-7 left-0 z-10 mt-2 w-[270px] origin-top-right rounded-md bg-white shadow-xl ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="py-1">
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/ztfi/index"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-mdafter:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf1")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zif/index"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md   after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf2")}
-                    </a>
-                  </MenuItem>
-
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zham/index"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md   after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf3")}
-                    </a>
-                  </MenuItem>
-
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zpp/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf4")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/tsj/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf5")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/ftm/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                    {t("navbar.conf6")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zmv/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf7")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/ffm/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-md after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf8")}
-                    </a>
-                  </MenuItem>
-                </div>
-              </MenuItems>
-            </Menu>
-          </li>
-          <li className="text-2xl text-white">
-            <a href="#contact">{t("navbar.Aloqa")}</a>
-          </li>
-        </ul>
-      </div>
-      <div className="bg-[#086AD8] z-40 sticky top-0 w-full xxs:hidden  md:flex justify-between items-center">
-        <div>
-          <img src={logo} className="md:w-[150px] w-[100px] pl-5 py-2" alt="" />
-        </div>
-        <ul className="flex gap-10 lg:gap-20 text-white items-center">
-          <li className="text-lg lg:text-2xl font-medium">
-            <a href="/">{t("navbar.Asosiy")}</a>
-          </li>
-          <li className="text-lg lg:text-2xl font-medium">
-            <a href="#about">{t("navbar.Haqida")}</a>
-          </li>
-          <li>
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <MenuButton className="text-xl flex items-center font-medium w-full text-white relative">
-                  <span className="text-lg lg:text-2xl">
-                    {t("navbar.Jurnal")}
-                  </span>
-                  <FaChevronDown
-                    size={15}
-                    aria-hidden="true"
-                    className="text-white absolute right-[-20px] top-[9px]"
-                  />
-                </MenuButton>
-              </div>
-
-              <MenuItems
-                transition
-                className="absolute top-7 left-0 z-10 mt-2 w-[350px] origin-top-right rounded-md bg-white shadow-xl ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="py-1">
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/sas"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j1")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/medicine"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j2")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/exscience"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j3")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/lawpolicy"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j4")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://journal.uznauka.uz/index.php/socscience"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.j5")}
-                    </a>
-                  </MenuItem>
-                </div>
-              </MenuItems>
-            </Menu>
-          </li>
-          <li>
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <MenuButton className="text-xl flex items-center gap-x-2 font-medium w-full text-white relative">
-                  <span className="text-lg lg:text-2xl">
-                    {t("navbar.Konf")}
-                  </span>
-                  <FaChevronDown
-                    size={15}
-                    aria-hidden="true"
-                    className="text-white absolute right-[-20px] top-[9px]"
-                  />
-                </MenuButton>
-              </div>
-
-              <MenuItems
-                transition
-                className="absolute top-7 left-0 z-10 mt-2 w-[600px] origin-top-right rounded-md bg-white shadow-xl ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="py-1">
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/ztfi/index"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf1")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zif/index"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf2")}
-                    </a>
-                  </MenuItem>
-
-                  <MenuItem className="my-2 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zham/index"
-                      className="block px-4 py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl    after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf3")}
-                    </a>
-                  </MenuItem>
-
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zpp/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf4")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/tsj/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                    {t("navbar.conf5")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/ftm/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf6")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/zmv/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf7")}
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="my-2 px-4 mx-2 relative">
-                    <a
-                      href="https://conference.uznauka.uz/index.php/ffm/index"
-                      className="block py-2 text-[#ababab] data-[focus]:bg-gray-100 data-[focus]:text-[#086ad8] data-[focus]:outline-none text-xl  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#086ad8] after:transition-all after:duration-1000 hover:after:w-full"
-                    >
-                      {t("navbar.conf8")}
-                    </a>
-                  </MenuItem>
-                </div>
-              </MenuItems>
-            </Menu>
-          </li>
-          <li className="text-lg lg:text-2xl font-medium">
-            <a href="#contact">{t("navbar.Aloqa")}</a>
-          </li>
-        </ul>
-        <div className="pr-6">
-          {/* <img src={til} alt="" /> */}
-          <Menu as="div" className="relative inline-block text-left">
-            <div>
-              <MenuButton className="flex items-center w-full justify-center gap-x-1.5 px-3 py-2 text-sm font-semibold text-gray-900 ">
-                <IoGlobeOutline size={25} color="white" />
-                <FaChevronDown
-                  aria-hidden="true"
-                  className="-mr-1 size-2 text-white"
-                />
-              </MenuButton>
-            </div>
-
-            <MenuItems
-              transition
-              className="absolute top-7 right-0 z-10 mt-2 w-[100px] origin-top-right rounded-md bg-white shadow-xl ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+            <a 
+              href="#about" 
+              className="text-slate-200 hover:text-rose-500 px-3 py-2 text-sm font-semibold tracking-wide transition-colors duration-200"
             >
-              <div className="py-1">
-                <MenuItem>
-                  <button
-                    onClick={translateUz}
-                    className="px-4 w-full py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                  >
-                    O'zbekcha
-                  </button>
-                </MenuItem>
-                <MenuItem>
-                  <button
-                    onClick={translateEn}
-                    className=" px-4 py-2 w-full text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                  >
-                    English
-                  </button>
-                </MenuItem>
-                <MenuItem>
-                  <button
-                    onClick={translateRu}
-                    className="block px-4 w-full py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                  >
-                    Русский
-                  </button>
-                </MenuItem>
-              </div>
-            </MenuItems>
-          </Menu>
+              {t("navbar.Haqida")}
+            </a>
+
+            {/* Journals Dropdown */}
+            <Menu as="div" className="relative">
+              <MenuButton className="flex items-center gap-1 text-slate-200 hover:text-rose-500 px-3 py-2 text-sm font-semibold tracking-wide transition-colors duration-200">
+                {t("navbar.Jurnal")} <FaChevronDown size={10} className="mt-0.5 opacity-80" />
+              </MenuButton>
+              <MenuItems 
+                transition
+                className="absolute left-0 mt-2 w-80 origin-top-left rounded-lg bg-slate-900/95 border border-slate-800 p-2 text-slate-200 shadow-2xl backdrop-blur-md transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
+              >
+                {journals.map((j, i) => (
+                  <MenuItem key={i}>
+                    <a 
+                      href={j.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 text-sm text-slate-300 hover:text-rose-500 hover:bg-slate-800/50 rounded-md transition duration-200 border-l-2 border-transparent hover:border-rose-500"
+                    >
+                      {j.name}
+                    </a>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            </Menu>
+
+            {/* Conferences Dropdown */}
+            <Menu as="div" className="relative">
+              <MenuButton className="flex items-center gap-1 text-slate-200 hover:text-rose-500 px-3 py-2 text-sm font-semibold tracking-wide transition-colors duration-200">
+                {t("navbar.Konf")} <FaChevronDown size={10} className="mt-0.5 opacity-80" />
+              </MenuButton>
+              <MenuItems 
+                transition
+                className="absolute left-0 mt-2 w-96 max-h-[70vh] overflow-y-auto origin-top-left rounded-lg bg-slate-900/95 border border-slate-800 p-2 text-slate-200 shadow-2xl backdrop-blur-md transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
+              >
+                {conferences.map((c, i) => (
+                  <MenuItem key={i}>
+                    <a 
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 text-sm text-slate-300 hover:text-rose-500 hover:bg-slate-800/50 rounded-md transition duration-200 border-l-2 border-transparent hover:border-rose-500 leading-snug"
+                    >
+                      {c.name}
+                    </a>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            </Menu>
+
+            <a 
+              href="#contact" 
+              className="text-slate-200 hover:text-rose-500 px-3 py-2 text-sm font-semibold tracking-wide transition-colors duration-200"
+            >
+              {t("navbar.Aloqa")}
+            </a>
+          </nav>
+
+          {/* Right Side Buttons: Language + Submit CTA */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Language Selector */}
+            <Menu as="div" className="relative">
+              <MenuButton className="flex items-center gap-2 text-slate-200 hover:text-rose-500 px-3 py-1.5 rounded-full border border-slate-700 hover:border-rose-500 text-sm font-semibold tracking-wide transition-all duration-200 bg-slate-800/30">
+                <FaGlobe className="opacity-80" />
+                <span>{langNames[currentLang]}</span>
+                <FaChevronDown size={8} className="opacity-80" />
+              </MenuButton>
+              <MenuItems 
+                transition
+                className="absolute right-0 mt-2 w-32 origin-top-right rounded-lg bg-slate-900/95 border border-slate-800 p-1 text-slate-200 shadow-2xl backdrop-blur-md transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
+              >
+                {Object.keys(langNames).map((lang) => (
+                  <MenuItem key={lang}>
+                    <button
+                      onClick={() => changeLanguage(lang)}
+                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition duration-200 ${
+                        currentLang === lang 
+                          ? "bg-rose-600 text-white font-bold" 
+                          : "text-slate-300 hover:text-rose-500 hover:bg-slate-800/50"
+                      }`}
+                    >
+                      {langNames[lang]}
+                    </button>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            </Menu>
+
+            {/* Premium CTA Button */}
+            <a 
+              href="https://journal.uznauka.uz/index.php/sas" 
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:shadow-rose-600/10 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0"
+            >
+              {t("home.but1")}
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex md:hidden items-center gap-3">
+            {/* Language Globe Icon Button */}
+            <Menu as="div" className="relative">
+              <MenuButton className="p-2 rounded-full border border-slate-700 text-slate-200 hover:text-rose-500 transition-colors bg-slate-800/30">
+                <FaGlobe />
+              </MenuButton>
+              <MenuItems 
+                transition
+                className="absolute right-0 mt-2 w-32 origin-top-right rounded-lg bg-slate-900/95 border border-slate-800 p-1 text-slate-200 shadow-2xl backdrop-blur-md transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
+              >
+                {Object.keys(langNames).map((lang) => (
+                  <MenuItem key={lang}>
+                    <button
+                      onClick={() => changeLanguage(lang)}
+                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition duration-200 ${
+                        currentLang === lang 
+                          ? "bg-rose-600 text-white font-bold" 
+                          : "text-slate-300 hover:text-rose-500 hover:bg-slate-800/50"
+                      }`}
+                    >
+                      {langNames[lang]}
+                    </button>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            </Menu>
+
+            {/* Menu Trigger */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-md text-slate-200 hover:text-white focus:outline-none"
+            >
+              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
         </div>
       </div>
-    </>
+
+      {/* Mobile Drawer menu */}
+      {isOpen && (
+        <div className="md:hidden bg-slate-900 border-t border-slate-800 h-screen overflow-y-auto px-4 pt-4 pb-20 space-y-3">
+          <a
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="block text-slate-200 hover:text-rose-500 px-3 py-3 rounded-md text-base font-semibold border-b border-slate-800"
+          >
+            {t("navbar.Asosiy")}
+          </a>
+          <a
+            href="#about"
+            onClick={() => setIsOpen(false)}
+            className="block text-slate-200 hover:text-rose-500 px-3 py-3 rounded-md text-base font-semibold border-b border-slate-800"
+          >
+            {t("navbar.Haqida")}
+          </a>
+
+          {/* Journals Sublist */}
+          <div className="px-3 py-2">
+            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">{t("navbar.Jurnal")}</span>
+            <div className="mt-2 pl-3 space-y-2 border-l border-slate-700">
+              {journals.map((j, i) => (
+                <a
+                  key={i}
+                  href={j.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-slate-300 hover:text-rose-500 py-1.5 text-sm"
+                >
+                  {j.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Conferences Sublist */}
+          <div className="px-3 py-2">
+            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">{t("navbar.Konf")}</span>
+            <div className="mt-2 pl-3 space-y-2 border-l border-slate-700 max-h-60 overflow-y-auto">
+              {conferences.map((c, i) => (
+                <a
+                  key={i}
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-slate-300 hover:text-rose-500 py-1.5 text-xs leading-normal"
+                >
+                  {c.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <a
+            href="#contact"
+            onClick={() => setIsOpen(false)}
+            className="block text-slate-200 hover:text-rose-500 px-3 py-3 rounded-md text-base font-semibold border-b border-slate-800"
+          >
+            {t("navbar.Aloqa")}
+          </a>
+
+          {/* Mobile CTA */}
+          <div className="pt-6 px-3">
+            <a
+              href="https://journal.uznauka.uz/index.php/sas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center bg-gradient-to-r from-rose-600 to-rose-700 text-white py-3 rounded-lg font-bold shadow-lg"
+            >
+              {t("home.but1")}
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
+
